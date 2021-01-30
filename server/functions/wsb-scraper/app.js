@@ -2,8 +2,6 @@ const axios = require('axios');
 const parser = require('fast-xml-parser');
 const he = require('he');
 
-const { sendTickers, getLatestBets } = require('./moongo');
-
 const posts = {};
 const tickers = {};
 
@@ -88,16 +86,14 @@ function parsePost(post) {
   }
 }
 
-async function main() {
-  console.log('[BEST]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/best/.rss'));
-  console.log('[HOT]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/hot/.rss'));
-  console.log('[NEW]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/new/.rss'));
-  console.log('[TOP]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/top/.rss'));
-  console.log('[RISING]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/rising/.rss'));
+module.exports = function() {
+  return new Promise(async (resolve) => {
+    console.log('[BEST]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/best/.rss'));
+    console.log('[HOT]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/hot/.rss'));
+    console.log('[NEW]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/new/.rss'));
+    console.log('[TOP]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/top/.rss'));
+    console.log('[RISING]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/rising/.rss'));
 
-  console.log('[FINAL TICKER COUNT]:', tickers);
-
-  await sendTickers(tickers);
-}
-
-main();
+    resolve(tickers);
+  });
+};

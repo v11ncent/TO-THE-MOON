@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "bets": {
+      ".indexOn": "scrape"
+    }
+  }
+}
