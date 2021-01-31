@@ -4,6 +4,7 @@ const he = require('he');
 
 let posts = {};
 let tickers = {};
+let comments = {};
 
 function getTickers(string) {
   let str = string.toUpperCase();
@@ -39,12 +40,14 @@ function getRSSFeed(url) {
       let parsedData = parser.parse(res.data);
       let parsedArray = parsedData.feed.entry;
       
+     
+
       parsedArray.forEach((ele) => {
         posts[ele.id] = parsePost(ele);
       });
 
       let remaining = parsedArray.filter(({ id }) => posts[id]);
-
+      
       if(remaining.length) {
         remaining.forEach((ele, idx) => {
           posts[ele.id] = parsePost(ele);
@@ -60,23 +63,36 @@ function getRSSFeed(url) {
   
 }
 
+
 function parsePost(post) {
   let id = post.id;
   let author = post.author.uri;
   let title = he.decode(post.title);
   let content = he.decode(post.content);
   let ticks = Object.keys(tickers, title);
+
+  //grabs comment URLs
+  if (content.includes('[link]' && '[comments]')) {
+    const beginning = content.indexOf('[link]');
+    const end = content.indexOf('[comments]');
+    const beginningShift = 39;
+    const endShift = 2;
+    let subStr = content.substring(beginning + beginningShift, end - endShift);
+  }
+  
+
   if (!posts[id]) {
     let t = [...getTickers(title), ...getTickers(content)];
-
-    t.forEach((tick) => {
+    
+    t.forEach(tick => {
       tickers[tick] = tickers[tick] ? tickers[tick] + 1 : 1;
     });
 
     if (
       t.length === 0 &&
       !(containsTickers(ticks, title) && containsTickers(ticks, content))
-    ) {
+    ) 
+    {
       return {
         author,
         title,
@@ -86,7 +102,8 @@ function parsePost(post) {
   }
 }
 
-module.exports = function() {
+//https://us-central1-to-the-moon-8383a.cloudfunctions.net/runTickersUpdate
+module.exports = (function() {
   posts = {};
   tickers = {};
 
@@ -99,4 +116,4 @@ module.exports = function() {
 
     resolve(tickers);
   });
-};
+})();

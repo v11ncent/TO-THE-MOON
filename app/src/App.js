@@ -1,15 +1,17 @@
-import StockAccordion from './components/StockAccordion';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import StockHeader from './components/StockHeader';
 import axios from 'axios';
+
+import StockAccordion from './components/StockAccordion';
+import StockHeader from './components/StockHeader';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      stocks: []
+      stocks: [],
+      totalOccurence: 1
     };
   }
 
@@ -27,12 +29,19 @@ class App extends React.Component {
               return -1;
             }
             if (a.occurences < b.occurences) {
-              return 1;
+              return 1; 
             }
             return 0;
           })
 
-          this.setState({ stocks });
+       let totalOccurence = 0;
+       stocks.forEach(ele => {
+        totalOccurence += ele.occurences;
+       }); 
+
+       this.setState({ totalOccurence });
+       this.setState({ stocks });
+      
     })
   }
 
@@ -41,7 +50,7 @@ class App extends React.Component {
       <div style={{ padding: '1rem' }}>
         <StockHeader></StockHeader>
         <br />
-        <StockAccordion stocks={this.state.stocks} />
+        <StockAccordion stocks={this.state.stocks} totalOccurence={this.state.totalOccurence} />
       </div>
     );
   }
