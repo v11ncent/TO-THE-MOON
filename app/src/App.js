@@ -1,6 +1,5 @@
 import StockAccordion from './components/StockAccordion';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import index from './index.css';
 import React from 'react';
 import StockHeader from './components/StockHeader';
 
@@ -15,8 +14,12 @@ class App extends React.Component {
   }
 
   render() {
-
-    return <div><StockHeader></StockHeader><StockAccordion stocks={this.state.stocks} /></div>
+    return (
+      <div>
+        <StockHeader></StockHeader>
+        <StockAccordion stocks={this.state.stocks} />
+      </div>
+    );
   }
 
 }

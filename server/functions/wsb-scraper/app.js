@@ -2,8 +2,8 @@ const axios = require('axios');
 const parser = require('fast-xml-parser');
 const he = require('he');
 
-const posts = {};
-const tickers = {};
+let posts = {};
+let tickers = {};
 
 function getTickers(string) {
   let str = string.toUpperCase();
@@ -87,6 +87,9 @@ function parsePost(post) {
 }
 
 module.exports = function() {
+  posts = {};
+  tickers = {};
+
   return new Promise(async (resolve) => {
     console.log('[BEST]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/best/.rss'));
     console.log('[HOT]:', await getRSSFeed('https://www.reddit.com/r/wallstreetbets/hot/.rss'));
