@@ -24,11 +24,11 @@ I mostly took a back seat to the coding on this project and got to take the reig
 
 **Ben**
 
-This was my first ever hackathon, and I learned many things that are sure to benefit me in the future. I learned how to successfully develop a web application using Javascript, while also learning how to use React. I had to learn React Bootstrap on the fly and use this knowledge to create the cards for the web application. I learned how to succesfully communicate and work with a team in a coding and technological environment as well. I had a lot of fun working with my team and I look forward to future hackathons! 
+This was my first ever hackathon, and I learned many things that are sure to benefit me in the future. I learned how to successfully develop a web application using Javascript, while also learning how to use React. I had to learn React Bootstrap on the fly and use this knowledge to create the cards for the web application. I learned a lot from my team, and I learned how to succesfully communicate and work with a team in a coding and technological environment as well. I had a lot of fun working with my team and I look forward to future hackathons! 
 
 **Nik**
 
-As this was my first time participating in a hackathon, I could not be in more awe of how much I have learned in the span of 48 hours. From learning how to use Javascript, React, HTML, and overall working with a team editing code in real-time for the first time was an extremely insightful and incredibly fun experience for me. I can not wait to utikize hackathons in the future to further my skills and deepen my love for coding.
+As this was my first time participating in a hackathon, I could not be in more awe of how much I have learned in the span of 48 hours. From learning how to use Javascript, React, HTML, and overall working with a team editing code in real-time for the first time was an extremely insightful and incredibly fun experience for me. I can not wait to utilize hackathons in the future to further my skills and deepen my love for coding.
 
 **Vince**
 
