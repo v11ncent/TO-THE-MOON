@@ -1,21 +1,68 @@
-* Tired of scrolling throuhg reddit
-* Dont want to miss the next Gamestop
-* We used to trust our money with big banks
-* But now you have the power to invest
-* Introducing "To The Moon"
-* Stop spending hours scroll through /r/wallstreetbets and start investing in the stocks that matter most
+
+![](./images/reddit-scroll.gif)
 
 ---
 
-* Using the power of the cloud and our advanced algorithms, we use our machines to read all the trending reddit posts
-* Evaluate the most relevant stocks in the moment, so that you know when to invest
+<img src="./images/gamestop-stock.png" style="width: 50%;" />
 
 ---
 
-* To get in on the action, simply visit wsb-tothemoon.space
-* From there, you get updates to the hottest stocks being talked about
-* Simply select the stock that interests you, and see where it is in the market
+<img src="./images/big-banks.png" style="width: 50%;" />
 
 ---
 
-* So what are you waiting for? Hop on in because this ship is going to the moon.
+![](./images/people-power.jpg)
+
+---
+
+![](./images/to-the-moon.png)
+
+---
+
+![](./images/reddit-scroll.gif)
+
+---
+
+![](./images/hot-stock.png)
+
+---
+
+![](./images/gcp.jpg)
+
+---
+
+![](./images/algorithms.jpg)
+
+---
+
+![](./images/reddit-scroll.gif)
+
+---
+
+<img src="./images/reddit-post.png" style="width: 50%" />
+
+---
+
+<img src="./images/reddit-meme.png" style="width: 50%" />
+
+---
+
+# 🚀 TO THE MOON 🚀
+
+
+#
+wsb-tothemoon.space
+
+---
+
+<img src="./images/moon-charts.png" style="width: 50%;" />
+
+---
+
+![](./images/wsb-moon.png)
+
+---
+
+wsb-tothemoon.space
+
+---
