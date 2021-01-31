@@ -2,8 +2,13 @@ import Card from 'react-bootstrap/Card';
 
 function StockHeader() {
     return (
-        <Card style={{ margin: '50px', fontFamily: 'Times New Roman' }}>
-            <Card.Header style={{ backgroundColor: 'red' }}> <center> To The Moon! </center> </Card.Header>
+        <Card>
+            <Card.Header style={{ 
+                textAlign: 'center', 
+                textTransform: 'uppercase', 
+                letterSpacing: '2px' }}> 
+                🚀 To The Moon 🚀 
+            </Card.Header>
         </Card >
     )
 }
