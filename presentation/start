@@ -1,0 +1,3 @@
+#!/bin/zsh
+pandoc -t revealjs -s demo.md -o presentation.html;
+open presentation.html;
