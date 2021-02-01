@@ -13,7 +13,7 @@ This app is powered by [Firebase](https://firebase.google.com). If you want to d
 $ cd server 
 
 # Login to firebase
-$firebase login
+$ firebase login
 
 # Initialize firebase project
 $ firebase init
