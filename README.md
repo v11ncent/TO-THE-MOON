@@ -4,6 +4,44 @@
 
 **Swamphacks 2021 Slack Profile:** [https://swamphacks-vii.slack.com/team/U01M3GSKE8Y](https://swamphacks-vii.slack.com/team/U01M3GSKE8Y)
 
+## Deployment
+
+This app is powered by [Firebase](https://firebase.google.com). If you want to deploy it, you'll need to install the [firebase CLI](https://firebase.google.com/docs/cli) and initialize the project with the following command:
+
+```sh
+# Navigate to the server source code directory
+$ cd server 
+
+# Login to firebase
+$firebase login
+
+# Initialize firebase project
+$ firebase init
+```
+
+When prompted, select the following services from firebase:
+
+* Database
+* Functions
+* Hosting
+
+When prompted, use the following options:
+
+* Select **JavaScript** for language
+* Select **No** for ESLint
+* Do NOT overwrite any files
+* Install npm dependenciees
+* Use **public** as hosting directory
+* Configure as single-page application
+
+Finally to deploy the application, you'll need to run the following command:
+
+```sh
+$ firebase deploy
+```
+
+**Note:** You will need to enable an app engine in your [GCP console](https://console.cloud.google.com).
+
 ## Inspiration
 
 The spike of the *$GME* stock has sparked some major press and we believe that there is something special happening with average joes on a reddit board deciding which way the needle moves as opposed to the folk running the hedge funds on wall street
@@ -29,7 +67,7 @@ This was my first ever hackathon, and I learned many things that are sure to ben
 
 **Nik**
 
-As this was my first time participating in a hackathon, I could not be in more awe of how much I have learned in the span of 48 hours. From learning how to use Javascript, React, HTML, and overall working with a team editing code in real-time for the first time was an extremely insightful and incredibly fun experience for me. I can not wait to utilize hackathons. 
+As this was my first time participating in a hackathon, I could not be in more awe of how much I have learned in the span of 48 hours. From learning how to use Javascript, React, HTML, and overall working with a team editing code in real-time for the first time was an extremely insightful and incredibly fun experience for me. I can not wait to utilize hackathons in the future. 
 
 **Vince**
 
@@ -40,7 +78,3 @@ Helped design and implement the retrieval of trending stocks from Reddit RSS fee
 We want to add a chart which evaluates trends from prior scrapes of */r/wallstreetbets* throughout the week so that users can compare the amount of hype different stocks receive throughout the course of their discussions. It would be nice to scrape posts with images and have them be analyzed by the vision engine provided by GCP. We can leverage the technology to see into screenshots being posted by users on the forums.
 
 ## Built With
-
-* React
-* Nodejs
-* Firebase
