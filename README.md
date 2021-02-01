@@ -34,10 +34,14 @@ When prompted, use the following options:
 * Use **public** as hosting directory
 * Configure as single-page application
 
-Finally to deploy the application, you'll need to run the following command:
+Finally to deploy the application, you'll need to run the following command from the main direcotry:
 
 ```sh
-$ firebase deploy
+# Just for the first time...
+$ chmod +x ./deploy-app
+
+# This will build and deploy your app
+$ ./deploy-app
 ```
 
 **Note:** You will need to enable an app engine in your [GCP console](https://console.cloud.google.com).
