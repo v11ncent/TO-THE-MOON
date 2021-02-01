@@ -1,3 +1,4 @@
+#!/bin/bash
 rm -rf app/build && rm -rf server/public;
 cd app && npm run build && cd ..;
 cd server && firebase deploy && cd ..;
